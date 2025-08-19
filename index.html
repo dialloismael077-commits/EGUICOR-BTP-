@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EGUICOR BTP - Construction & Génie Civil</title>
+  <style>
+    :root {
+      --bg-color: #f4f4f4;
+      --text-color: #333;
+      --header-bg: #003366;
+      --nav-bg: #00509E;
+      --footer-bg: #001F3F;
+      --card-bg: #fff;
+    }
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #e0e0e0;
+      --header-bg: #0a2342;
+      --nav-bg: #19376d;
+      --footer-bg: #0a2342;
+      --card-bg: #1e1e1e;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      background: var(--header-bg);
+      color: #fff;
+      padding: 20px 20px 40px;
+      text-align: center;
+      position: relative;
+    }
+    header img {
+      max-width: 180px;
+      margin-bottom: 10px;
+    }
+    header h1 {
+      margin: 10px 0 0;
+      font-size: 2.2em;
+    }
+    header p {
+      font-size: 1.1em;
+    }
+    .toggle-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    /* NAVIGATION */
+    nav {
+      background: var(--nav-bg);
+      padding: 10px;
+      text-align: center;
+      position: relative;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    /* Menu hamburger */
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+      color: white;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+    }
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      margin: 10px;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: var(--nav-bg);
+        text-align: center;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section h2 {
+      color: var(--header-bg);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    body.dark section h2 {
+      color: #4fa3ff;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .service {
+      background: var(--card-bg);
+      padding: 20px;
+      margin: 10px;
+      flex: 1 1 250px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background 0.3s;
+    }
+    .contact {
+      background: var(--header-bg);
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 20px;
+      background: #25D366;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1em;
+    }
+    .whatsapp-btn:hover {
+      background: #1DA851;
+    }
+    footer {
+      background: var(--footer-bg);
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Mode sombre</button>
+    <img src="IMG_8776.jpeg" alt="Logo EGUICOR BTP">
+    <h1>EGUICOR BTP</h1>
+    <p>Construction • Rénovation • Génie Civil</p>
+  </header>
+  <nav>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+    <div class="nav-links">
+      <a href="#about">À propos</a>
+      <a href="#services">Nos Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+  <section id="about">
+    <h2>Qui sommes-nous ?</h2>
+    <p>
+      <strong>EGUICOR BTP</strong> est une entreprise spécialisée dans la <strong>construction</strong>, 
+      la <strong>rénovation</strong> et les <strong>travaux de génie civil</strong>. 
+      Notre mission est de réaliser des ouvrages durables et modernes, adaptés aux besoins 
+      de nos clients, tout en respectant les normes de qualité et de sécurité.
+    </p>
+  </section>
+  <section id="services">
+    <h2>Nos Services</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Construction</h3>
+        <p>Bâtiments résidentiels, commerciaux et industriels, réalisés avec expertise et solidité.</p>
+      </div>
+      <div class="service">
+        <h3>Rénovation</h3>
+        <p>Travaux de modernisation et réhabilitation pour redonner vie à vos infrastructures.</p>
+      </div>
+      <div class="service">
+        <h3>Génie Civil</h3>
+        <p>Projets d’envergure : routes, ponts, ouvrages hydrauliques et aménagements urbains.</p>
+      </div>
+      <div class="service">
+        <h3>Conseil & Suivi</h3>
+        <p>Accompagnement technique et suivi rigoureux de vos projets du début à la fin.</p>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <h2>Contactez-nous</h2>
+    <p>Téléphone : <a href="tel:+224624903797" style="color:white;">+224 624 90 37 97</a></p>
+    <p>Email : <a href="mailto:egcr.gc077@gmail.com" style="color:white;">egcr.gc077@gmail.com</a></p>
+    <a class="whatsapp-btn" href="https://wa.me/224624903797" target="_blank">💬 Discuter sur WhatsApp</a>
+  </section>
+  <footer>
+    © 2025 EGUICOR BTP - Tous droits réservés
+  </footer>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+      const btn = document.querySelector(".toggle-btn");
+      if (document.body.classList.contains("dark")) {
+        btn.textContent = "☀️ Mode clair";
+      } else {
+        btn.textContent = "🌙 Mode sombre";
+      }
+    }
+    function toggleMenu() {
+      document.querySelector(".nav-links").classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
